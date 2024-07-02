@@ -8,9 +8,9 @@ import Character from '../classes/Character';
 
 test.each([
   [
-    new Bowman('Vasya'),
+    new Bowman('Mary'),
     {
-      name: 'Vasya',
+      name: 'Mary',
       type: 'Bowman',
       health: 100,
       level: 1,
@@ -19,9 +19,9 @@ test.each([
     },
   ],
   [
-    new Swordsman('Sveta'),
+    new Swordsman('Alex'),
     {
-      name: 'Sveta',
+      name: 'Alex',
       type: 'Swordsman',
       health: 100,
       level: 1,
@@ -30,9 +30,9 @@ test.each([
     },
   ],
   [
-    new Magician('Petya'),
+    new Magician('George'),
     {
-      name: 'Petya',
+      name: 'George',
       type: 'Magician',
       health: 100,
       level: 1,
@@ -41,9 +41,9 @@ test.each([
     },
   ],
   [
-    new Undead('Vova'),
+    new Undead('Ann'),
     {
-      name: 'Vova',
+      name: 'Ann',
       type: 'Undead',
       health: 100,
       level: 1,
@@ -52,9 +52,9 @@ test.each([
     },
   ],
   [
-    new Zombie('Katya'),
+    new Zombie('Peter'),
     {
-      name: 'Katya',
+      name: 'Peter',
       type: 'Zombie',
       health: 100,
       level: 1,
@@ -63,9 +63,9 @@ test.each([
     },
   ],
   [
-    new Daemon('Joker'),
+    new Daemon('Mike'),
     {
-      name: 'Joker',
+      name: 'Mike',
       type: 'Daemon',
       health: 100,
       level: 1,
@@ -79,18 +79,18 @@ test.each([
 
 test('error short name', () => {
   expect(() => {
-    new Bowman('T');
+    new Bowman('M');
   }).toThrow();
 });
 
 test('error long name', () => {
   expect(() => {
-    new Bowman('Testtesttest');
+    new Bowman('Maaaaaaarryyyy');
   }).toThrow();
 });
 
 test('error other type', () => {
   expect(() => {
-    new Character('Tolya', 'Admin');
+    new Character('Oleg', 'Admin');
   }).toThrow();
 });
